@@ -1,0 +1,34 @@
+{
+  "name": "amp-stories",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel-node --extensions '.ts,.tsx' ./src/build/index.ts",
+    "dev": "nodemon --exec babel-node --extensions '.ts,.tsx' ./src/build/index.ts",
+    "serve": "serve dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/node": "^12.6.2",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.17",
+    "babel-plugin-styled-components": "^1.10.6",
+    "nodemon": "^1.19.1",
+    "serve": "^11.1.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.3.7",
+    "node-fetch": "^2.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2"
+  }
+}
