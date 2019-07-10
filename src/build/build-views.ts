@@ -20,7 +20,8 @@ const PATH_DIST = path.resolve(__dirname, "../../dist/pages");
 export async function buildPage(bodyElement: JSX.Element, path: string) {
   const sheet = new ServerStyleSheet();
   const body = renderToStaticMarkup(sheet.collectStyles(bodyElement));
-  const styles = sheet.getStyleTags();
+  // FIXME
+  const styles = sheet.getStyleTags().replace(/<style/g, "<style amp-custom");
   await accessOrCreateDirectory(PATH_DIST);
   await writeFilePromise(`${PATH_DIST}/${path}.html`, html({ body, styles }));
 }

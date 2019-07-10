@@ -13,7 +13,7 @@ export function AmpStoryPage(
 ) {
   const { className, children, id, ...rest } = props;
   return (
-    <amp-story-page id={id} className={className} {...rest}>
+    <amp-story-page id={id} class={className} {...rest}>
       {children}
     </amp-story-page>
   );

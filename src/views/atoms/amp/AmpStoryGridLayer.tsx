@@ -13,7 +13,7 @@ export function AmpStoryGridLayer(
 ) {
   const { children, className, template, ...rest } = props;
   return (
-    <amp-story-grid-layer template={template} className={className} {...rest}>
+    <amp-story-grid-layer template={template} class={className} {...rest}>
       {children}
     </amp-story-grid-layer>
   );

@@ -25,8 +25,15 @@ export function BlogRanking(props: Props) {
       {entries.map(({ blog }) => (
         <AmpStoryPage id={blog.nickname} key={blog.nickname}>
           <AmpStoryGridLayer template="fill">
-            {/* <AmpImg src={blog.profileImage} layout="fill" /> */}
-            <UserIcon src={blog.profileImage} />
+            <AmpImg src={blog.profileImage} layout="fill" />
+          </AmpStoryGridLayer>
+          <AmpStoryGridLayer template="vertical">
+            <UserIcon
+              src={blog.profileImage}
+              width="100"
+              height="100"
+              layout="fixed"
+            />
           </AmpStoryGridLayer>
         </AmpStoryPage>
       ))}
@@ -35,7 +42,5 @@ export function BlogRanking(props: Props) {
 }
 
 const UserIcon = styled(AmpImg)`
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
 `;

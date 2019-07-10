@@ -25,7 +25,7 @@ export function AmpStory(
   return (
     <amp-story
       standalone=""
-      className={className}
+      class={className}
       title={title}
       publisher={publisher}
       publisher-logo-src={publisherLogoSrc}
