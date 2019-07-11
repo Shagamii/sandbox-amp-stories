@@ -12,6 +12,7 @@ export type BlogRankingEntry = {
   blog: {
     nickname: string;
     profileImage: string;
+    title: string;
   };
 };
 

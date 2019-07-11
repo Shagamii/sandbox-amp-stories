@@ -34,6 +34,7 @@ export function BlogRanking(props: Props) {
               height="100"
               layout="fixed"
             />
+            <Title>{blog.title}</Title>
           </AmpStoryGridLayer>
         </AmpStoryPage>
       ))}
@@ -43,4 +44,9 @@ export function BlogRanking(props: Props) {
 
 const UserIcon = styled(AmpImg)`
   border-radius: 50%;
+`;
+
+const Title = styled.h1`
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
 `;

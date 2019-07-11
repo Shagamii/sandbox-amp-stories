@@ -21,7 +21,16 @@ export async function buildPage(bodyElement: JSX.Element, path: string) {
   const sheet = new ServerStyleSheet();
   const body = renderToStaticMarkup(sheet.collectStyles(bodyElement));
   // FIXME
-  const styles = sheet.getStyleTags().replace(/<style/g, "<style amp-custom");
+  const styles = `
+    <style amp-custom>
+    ${sheet
+      .getStyleTags()
+      .replace(/<.+?>/g, "")
+      .replace(/\/\*.+?\*\//g, "")
+      .replace(/\r?\n/g, "")}
+    </style>
+    `;
+  // @ts-ignore
   await accessOrCreateDirectory(PATH_DIST);
   await writeFilePromise(`${PATH_DIST}/${path}.html`, html({ body, styles }));
 }
